@@ -7,7 +7,6 @@ import InputBase from '@material-ui/core/InputBase'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
 import SearchIcon from '@material-ui/icons/Search'
-import MoreIcon from '@material-ui/icons/MoreVert'
 import logo from '../../logo.png'
 
 
@@ -105,27 +104,13 @@ const useStyles = makeStyles(theme => ({
 export default function PrimarySearchAppBar () {
   const classes = useStyles()
   const [anchorEl, setAnchorEl] = React.useState(null)
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
 
   const isMenuOpen = Boolean(anchorEl)
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
-
-  const handleProfileMenuOpen = event => {
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null)
-  }
 
   const handleMenuClose = () => {
     setAnchorEl(null)
-    handleMobileMenuClose()
   }
 
-  const handleMobileMenuOpen = event => {
-    setMobileMoreAnchorEl(event.currentTarget)
-  }
 
   const menuId = 'primary-search-account-menu'
   const renderMenu = (
@@ -142,8 +127,6 @@ export default function PrimarySearchAppBar () {
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   )
-
-  const mobileMenuId = 'primary-search-account-menu-mobile'
 
   return (
     <div className={classes.grow}>
@@ -185,17 +168,6 @@ export default function PrimarySearchAppBar () {
             </ul>
           </div>
 
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label='show more'
-              aria-controls={mobileMenuId}
-              aria-haspopup='true'
-              onClick={handleMobileMenuOpen}
-              color='inherit'
-            >
-              <MoreIcon/>
-            </IconButton>
-          </div>
         </Toolbar>
       </AppBar>
       {renderMenu}

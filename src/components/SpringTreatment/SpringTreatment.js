@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Header from '../Header/Header'
 import lightGreen from '@material-ui/core/colors/lightGreen'
-import lime from '@material-ui/core/colors/lime'
 import purple from '@material-ui/core/colors/purple'
 import background from '../../green-bg.png'
 
