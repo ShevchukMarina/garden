@@ -9,7 +9,6 @@ import Menu from '@material-ui/core/Menu'
 import SearchIcon from '@material-ui/icons/Search'
 import logo from '../../logo.png'
 
-
 import './Header.css'
 import { NavLink } from 'react-router-dom'
 import makeStyles from '@material-ui/core/styles/makeStyles'
