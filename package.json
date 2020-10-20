@@ -39,7 +39,7 @@
     "stylelint-build": "stylelint src/**/*.css",
     "stylelint-fix-sass": "stylelint --fix src/**/*.css",
     "watch-styles-sass": "npm-watch",
-    "start": "set PORT=3000 && npm-run-all -p watch-styles-sass start-js",
+    "start": "set PORT=4000 && npm-run-all -p watch-styles-sass start-js",
     "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
